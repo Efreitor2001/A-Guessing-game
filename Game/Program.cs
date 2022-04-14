@@ -8,12 +8,12 @@
     Console.Write("Введите число: "); // Вывод
     var num1 = Console.ReadLine(); // Ввод числа от пользователя
     int Num1; // Целочисленная переменная
-    bool IsNum = int.TryParse(num1, out Num1); // IsNum = true or false, если num1 - это число, то значение = true
+    bool IsNum = int.TryParse(num1, out Num1); // IsNum = true or false, если num1 - это число, то значение = true и запишет циферки в Num1
     while (IsNum == false) // Цикл, пока IsNum имеет значение false
     {
         Console.Write("Это не число, попробуй ещё раз: "); // Вывод
         num1 = Console.ReadLine(); // Ввод число от пользователся
-        IsNum = int.TryParse(num1, out Num1); // IsNum = true or false, если num1 - это число, то значение = true
+        IsNum = int.TryParse(num1, out Num1); // IsNum = true or false, если num1 - это число, то значение = true и запишет циферки в Num1
     }
     while (Num1 > 10 | Num1 < 1) // Цикл, пока Num1 > 10 или < 1
     {
@@ -23,13 +23,13 @@
             Console.Write("Не дури, введи число ещё раз: "); // Вывод
             var num2 = Console.ReadLine(); // Ввод число от пользователя
             int Num2; // Целочисленная переменная
-            bool IsNum2 = int.TryParse(num2, out Num2); // IsNum2 = true or false, если num1 - это число, то значение = true
+            bool IsNum2 = int.TryParse(num2, out Num2); // IsNum2 = true or false, если num1 - это число, то значение = true и запишет циферки в Num2
             Num1 = Num2; // Значение из Num2 перетекает в Num1
             while (IsNum2 == false) // Цикл, пока IsNum имеет значение false
             {
                 Console.Write("Это не число, попробуй ещё раз: "); // Вывод
                 num2 = Console.ReadLine(); // Ввод число от пользователя
-                IsNum2 = int.TryParse(num2, out Num2); // IsNum2 = true or false, если num1 - это число, то значение = true
+                IsNum2 = int.TryParse(num2, out Num2); // IsNum2 = true or false, если num1 - это число, то значение = true и запишет циферки в Num2
                 Num1 = Num2; // Значение из Num2 перетекает в Num1
             }
         }
